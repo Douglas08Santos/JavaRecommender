@@ -35,12 +35,7 @@ public class testPearson {
         for (Rating rating : recommender.subList(0, 10)) {
             if(rating.getValue() >= 1){
                 System.out.println(rating.getItem() + ", " + rating.getValue());
-            }
-                
-        }
-       
-       
-
-
+            }                
+        } 
     }
 }
