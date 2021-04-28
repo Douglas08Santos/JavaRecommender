@@ -2,8 +2,10 @@ package JavaRecommendation.test;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Timer;
 
 import JavaRecommendation.controller.Pearson;
+import JavaRecommendation.controller.PearsonCallable;
 import JavaRecommendation.controller.PearsonExecutor;
 import JavaRecommendation.data.MovieRepo;
 import JavaRecommendation.data.UserRepo;
@@ -16,10 +18,12 @@ import JavaRecommendation.model.Rating;
  */
 public class testPearson {
     public static void main(String[] args) {
+        long start = System.currentTimeMillis();
         UserRepo.init();
         MovieRepo.init();
         //Pearson pearson = new Pearson();
-        PearsonExecutor pearson = new PearsonExecutor();
+        //PearsonExecutor pearson = new PearsonExecutor();
+        PearsonCallable pearson = new PearsonCallable();
 
         //O usuario que receberá as recomendações
         User myUser = UserRepo.getUser(463);  
@@ -33,7 +37,9 @@ public class testPearson {
             System.out.println(rating.getItem() + ", " + 
                 MovieRepo.getTitle(rating.getItem()) +" = " +
                 rating.getValue());                   
-        }           
+        }  
+        long end = System.currentTimeMillis();   
+        System.out.println((end - start)/1000.0 + " segs");      
         
     }
 }

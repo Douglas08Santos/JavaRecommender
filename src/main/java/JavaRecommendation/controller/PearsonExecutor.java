@@ -17,9 +17,7 @@ public class PearsonExecutor implements SimilarityMetric{
     private double[][] simMatrix = null;
     private ArrayList<User> usersList;
     ArrayList<Rating> recommendations;
-    private User lastUser = null;
-
-   
+    private User lastUser = null;  
 
 
     public PearsonExecutor(){
@@ -42,19 +40,21 @@ public class PearsonExecutor implements SimilarityMetric{
         ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         for (int i = 0; i < usersList.size(); i++) {
             User user1 = usersList.get(i);
-            for (int j = i; j < usersList.size(); j++) {              
-                //*************************************************** */ 
-                User user2 = usersList.get(j);
-                Runnable task = () -> {
+            int current = i;
+            //*************************************************** */ 
+            Runnable task = () -> {
+                for (int j = current; j < usersList.size(); j++) {              
+                    User user2 = usersList.get(j);
                     calculateSimilarity(user1, user2);
-                };
-                executorService.execute(task);
-                //*************************************************** */ 
-            }
+                }
+            };
+            executorService.execute(task);
+            //*************************************************** */ 
+            
         }
+
         executorService.shutdown();
         while(!executorService.isTerminated()){
-
         }
     }
 
