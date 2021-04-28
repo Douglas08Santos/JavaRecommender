@@ -1,6 +1,11 @@
 package JavaRecommendation;
 
-import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import JavaRecommendation.model.Movie;
 
 /**
  * Hello world!
@@ -14,18 +19,26 @@ public class App
 {
     public static void main( String[] args )
     {
-        
-        System.out.println( "Hello World!" );
-        /*String csvPath = "src/resources/ml-100k/movies.csv";
-        File csvFile = new File(csvPath);
-        if (csvFile.isFile()) {
-            System.out.println("OK");
-            
-        } else {
-            System.out.println("Error");    
-        }*/
-
-        float top = 0, bottonUser1 = 0, bottonUser2 = 0;
-        System.out.println(top+" "+ bottonUser1 + " " + bottonUser2);
+        System.out.println("Loading Movies...");
+        String csvPath = "src/resources/ml-100k/test.txt";
+        try {
+            System.out.println("Opening: " + csvPath);
+            FileReader fileReader = new FileReader(csvPath);
+            BufferedReader reader = new BufferedReader(fileReader);
+            String header = reader.readLine();
+            String line = "";
+            while((line = reader.readLine()) != null){
+                String[] data = line.split(",");
+                
+                
+               
+            }
+            reader.close();
+            System.out.println("Loaded movies");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+       
+       
     }
 }

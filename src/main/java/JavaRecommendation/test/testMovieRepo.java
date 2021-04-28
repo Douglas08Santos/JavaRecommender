@@ -8,7 +8,7 @@ public class testMovieRepo {
         *   Teste Movie Repository
         */
         System.out.println(MovieRepo.size());
-        int movieid = 193587;
+        int movieid = 40491;
         /*
         *   movieId: 193587
             title: Bungo Stray Dogs: Dead Apple (2018)
@@ -17,6 +17,7 @@ public class testMovieRepo {
         System.out.println(MovieRepo.containsID(movieid));
         System.out.println(MovieRepo.getTitle(movieid));
         System.out.println(MovieRepo.getGenres(movieid));
+
         
     }
 }

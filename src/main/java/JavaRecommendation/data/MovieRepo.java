@@ -27,7 +27,11 @@ public class MovieRepo {
                 String[] data = line.split(",");
                 Integer movieId = Integer.parseInt(data[0]);
                 String title = data[1];
-                String genres = data[2];
+                //Caso o titulo do filme possua ',' 
+                for (int i = 2; i < data.length-1; i++) {
+                    title = title + "," + data[i];
+                }                
+                String genres = data[data.length - 1];
                 Movie newMovie = new Movie(movieId, title, genres);
                 moviesMap.put(movieId, newMovie);
             }

@@ -8,7 +8,7 @@ public interface SimilarityMetric {
      * @param user2 Segundo usuário
      * @return valor de similaridade entre os 2 usuários 
      */
-    public double calculateSimilarity(User user1, User user2);
+    public void calculateSimilarity(User user1, User user2);
     /**
      * Prevê a classificação de um filme para um determinado 
      * usando usando a métrica de similaridade
@@ -17,5 +17,5 @@ public interface SimilarityMetric {
      * @param threshold
      * @return a avaliação prevista que o usuário teria feito para aquele filme
      */
-    public float predictRating(User user, Integer movieId, float threshold);
+    public float predictRating(User user, Integer movieId, float threshold);     
 }
