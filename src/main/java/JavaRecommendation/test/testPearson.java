@@ -2,7 +2,6 @@ package JavaRecommendation.test;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Timer;
 
 import JavaRecommendation.controller.Pearson;
 import JavaRecommendation.controller.PearsonCallable;
@@ -21,9 +20,9 @@ public class testPearson {
         long start = System.currentTimeMillis();
         UserRepo.init();
         MovieRepo.init();
-        //Pearson pearson = new Pearson();
+        Pearson pearson = new Pearson();
         //PearsonExecutor pearson = new PearsonExecutor();
-        PearsonCallable pearson = new PearsonCallable();
+        //PearsonCallable pearson = new PearsonCallable();
 
         //O usuario que receberá as recomendações
         User myUser = UserRepo.getUser(463);  
