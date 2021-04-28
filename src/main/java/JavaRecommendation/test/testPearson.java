@@ -4,47 +4,52 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import JavaRecommendation.controller.Pearson;
+import JavaRecommendation.controller.PearsonExecutor;
 import JavaRecommendation.data.MovieRepo;
 import JavaRecommendation.data.UserRepo;
 import JavaRecommendation.interfaces.User;
-import JavaRecommendation.model.Movie;
 import JavaRecommendation.model.Rating;
 /**
+ * Recommender Sequencial
  * TODO:
  * usage: testPearson.java <ratings file> <movie file> <user id> <num_recom>
  */
 public class testPearson {
     public static void main(String[] args) {
-        //Carrega todo os usuários
-        ArrayList<User> users = UserRepo.getUsers();
-        //Inicializa o pearson
-        Pearson pearson = new Pearson(users);
-        float threshold = 0;
+        UserRepo.init();
+        MovieRepo.init();
+        //Pearson pearson = new Pearson();
+        PearsonExecutor pearson = new PearsonExecutor();
 
         //O usuario que receberá as recomendações
-        User myUser = UserRepo.getUser(148);
-        
-        //A lista de todos os filmes
-        ArrayList<Movie> allmovies = MovieRepo.getMovies();
-        //Salvar as recomendações
-        ArrayList<Rating> recommender = new ArrayList<Rating>();
+        User myUser = UserRepo.getUser(463);  
         //Calcula as recomendações
-        for (Movie movie: allmovies) {
-            //if (myUserRated.contains(movie.getMovieId())) {
-                float predictedRating = pearson.predictRating(myUser, movie.getMovieId(), threshold);
-                
-                Rating rating = new Rating(movie.getMovieId(), predictedRating);
-                recommender.add(rating);
-                
-        }
+        ArrayList<Rating> result = pearson.getRecommendations(myUser);
         //Organiza as recomendações recebidas
-        Collections.sort(recommender, Collections.reverseOrder());
+        Collections.sort(result, Collections.reverseOrder());
         //Imprimi os 10 como melhores indicações ao usuário
         System.out.println("\nTop 10 filmes recomendados para o usuário: " + myUser.getUserId());
-        for (Rating rating : recommender.subList(0, 10)) {
+        for (Rating rating : result.subList(0, 10)) {
             System.out.println(rating.getItem() + ", " + 
                 MovieRepo.getTitle(rating.getItem()) +" = " +
                 rating.getValue());                   
-        }         
+        }           
+        
     }
 }
+
+
+ /**
+         * 
+         *  Top 10 filmes recomendados para o usuário: 463
+         *  40491, "Match Factory Girl, The (Tulitikkutehtaan tyttö) (1990)" = 6.542424
+            8477, "Jetée, La (1962)" = 6.542424
+            87234, Submarine (2010) = 6.1773863
+            3567, Bossa Nova (2000) = 6.1478786
+            2314, Beloved (1998) = 6.079641
+            4055, Panic (2000) = 6.079641
+            156605, Paterson = 6.042424
+            25771, "Andalusian Dog, An (Chien andalou, Un) (1929)" = 6.0206404
+            4021, Before Night Falls (2000) = 5.9760647
+            132333, Seve (2014) = 5.9405074
+         */

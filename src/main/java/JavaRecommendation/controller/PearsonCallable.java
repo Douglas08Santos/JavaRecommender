@@ -1,6 +1,5 @@
 package JavaRecommendation.controller;
 
-import java.util.ArrayList;
 
 import JavaRecommendation.interfaces.SimilarityMetric;
 import JavaRecommendation.interfaces.User;

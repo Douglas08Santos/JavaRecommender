@@ -2,19 +2,28 @@ package JavaRecommendation.controller;
 
 import java.util.ArrayList;
 
+import JavaRecommendation.data.MovieRepo;
+import JavaRecommendation.data.UserRepo;
 import JavaRecommendation.interfaces.SimilarityMetric;
 import JavaRecommendation.interfaces.User;
+import JavaRecommendation.model.Movie;
+import JavaRecommendation.model.Rating;
 
 public class Pearson implements SimilarityMetric{
     private double[][] simMatrix = null;
     private ArrayList<User> usersList;
+    ArrayList<Rating> recommendations;
+    private User lastUser = null;
 
-    public Pearson(final ArrayList<User> users){
+    public Pearson(){
         System.out.println("Loading Pearson");
+        ArrayList<User> users = UserRepo.getUsers();
+        System.out.println(users.size());
         simMatrix = new double[users.size()][users.size()];
         usersList = users;
         System.out.println("Calculing All Similarities");
         calculateAllSimilarity();
+        System.out.println("Pearson Initialized");
 
     }
 
@@ -74,7 +83,6 @@ public class Pearson implements SimilarityMetric{
         return simMatrix[user.getInternalId()][other.getInternalId()];
     }
     
-    //Target
     @Override
     public float predictRating(User user, Integer movieId, float threshold) {
         ArrayList<User> neighbours = calculateNeighbours(user, threshold);
@@ -93,6 +101,43 @@ public class Pearson implements SimilarityMetric{
             return -1;
         }
     }
+    /**
+     * Gerar a lista de filmes recomendados para o user
+     * @param user
+     */
+    private void generateRecommendations(User user){
+        recommendations = new ArrayList<Rating>();
+        for (Movie movie: MovieRepo.getMovies()) {        
+            float predictedRating = predictRating(user, movie.getMovieId(), 0.0f);            
+            Rating rating = new Rating(movie.getMovieId(), predictedRating);
+            recommendations.add(rating);
+                         
+        }
+    }
+
+    /**
+     * 
+     * @return a lista de filmes recommendados
+     */
+    public ArrayList<Rating> getRecommendations(User user) {
+        //Primeira vez
+        if (lastUser == null) {
+            generateRecommendations(user);
+            lastUser = user;
+            return recommendations;
+        }
+        //Outras consultas
+        if (lastUser.getUserId() == user.getUserId()) {
+            return recommendations;
+        }else{
+            generateRecommendations(user);
+            lastUser = user;
+            return recommendations;
+        }
+        
+    }
+
+    
     /**
      * Calcula o conjunto de vizinhos que serão usados ​​na previsão de uma
      * classificação de filme para um determinado usuário.
