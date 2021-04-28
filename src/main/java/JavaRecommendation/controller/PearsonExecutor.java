@@ -159,6 +159,8 @@ public class PearsonExecutor implements SimilarityMetric{
         ArrayList<User> neighbours = calculateNeighbours(user, threshold);
         float top = 0, botton = 0;
         float avgUser = user.getAvgRatings();
+
+
         for (User neigh : neighbours) {
             if (neigh.hasRating(movieId)) {
                 top += getPearson(user, neigh) * (neigh.getRating(movieId) - neigh.getAvgRatings());
@@ -173,8 +175,6 @@ public class PearsonExecutor implements SimilarityMetric{
         }
     }
     
-
-    
     /**
      * Calcula o conjunto de vizinhos que serão usados ​​na previsão de uma
      * classificação de filme para um determinado usuário.
@@ -185,6 +185,7 @@ public class PearsonExecutor implements SimilarityMetric{
     //Target
     private ArrayList<User> calculateNeighbours(User user, float threshold) {
         ArrayList<User> result = new ArrayList<User>();
+        
         for (User current : usersList) {
             if(user.getUserId() != current.getUserId()){
                 if(getPearson(user, current) > threshold){

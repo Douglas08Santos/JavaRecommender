@@ -6,6 +6,7 @@ import java.util.Collections;
 import JavaRecommendation.controller.Pearson;
 import JavaRecommendation.controller.PearsonCallable;
 import JavaRecommendation.controller.PearsonExecutor;
+import JavaRecommendation.controller.PearsonParallelStrem;
 import JavaRecommendation.data.MovieRepo;
 import JavaRecommendation.data.UserRepo;
 import JavaRecommendation.interfaces.User;
@@ -20,7 +21,8 @@ public class App
         MovieRepo.init();
         //Pearson pearson = new Pearson();
         //PearsonExecutor pearson = new PearsonExecutor();
-        PearsonCallable pearson = new PearsonCallable();
+        //PearsonCallable pearson = new PearsonCallable();
+        PearsonParallelStrem pearson = new PearsonParallelStrem();
 
         //O usuario que receberá as recomendações
         User myUser = UserRepo.getUser(463);  
