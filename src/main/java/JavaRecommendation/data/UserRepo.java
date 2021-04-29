@@ -10,7 +10,7 @@ import JavaRecommendation.model.MyUser;
 
 public class UserRepo {
     private static HashMap<Integer, User> usersMap;
-    private static String filePath = "src/resources/ml-10m/ratings.dat";
+    private static String filePath = "src/resources/ml-100k/ratings.csv";
     @SuppressWarnings("unused")
     private static void loadUsers(String filePath) {
         try {

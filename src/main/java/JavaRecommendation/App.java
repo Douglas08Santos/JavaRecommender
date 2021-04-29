@@ -1,7 +1,7 @@
 package JavaRecommendation;
 
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.Scanner;
 
 import JavaRecommendation.controller.Pearson;
 import JavaRecommendation.controller.PearsonCallable;
@@ -12,38 +12,72 @@ import JavaRecommendation.data.UserRepo;
 import JavaRecommendation.interfaces.User;
 import JavaRecommendation.model.Rating;
 
-
-public class App 
-{
-    public static void main( String[] args )
-    {
-        String movieFile = "src/resources/ml-20m/movies.csv";
-        String ratingFile = "src/resources/ml-20m/ratings.csv";
+public class App {
+    public static void main(String[] args) {
+        String movieFile = args[0];
+        String ratingFile = args[1];
         UserRepo.init(ratingFile);
         MovieRepo.init(movieFile);
-        int users[] = {19, 87, 30, 27, 96};
-        //Pearson pearson = new Pearson();
-        //PearsonExecutor pearson = new PearsonExecutor();
-        //PearsonCallable pearson = new PearsonCallable();
-        PearsonParallelStream pearson = new PearsonParallelStream();
+        Pearson pearson = new Pearson();
+        PearsonExecutor pearsonExecutor = new PearsonExecutor();
+        PearsonCallable pearsonCallable = new PearsonCallable();
+        PearsonParallelStream pearsonStream = new PearsonParallelStream();
         User myUser;
-        long total = 0;
-        for (int i = 0; i < 1; i++) {
+        int optPearson = -1;
+        int userId;
+        long start = 0, end = 0;
+        ArrayList<Rating> result = new  ArrayList<Rating>();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Sistema de Recomendação");
+        System.out.println("1 - Sequencial");
+        System.out.println("2 - Executor");
+        System.out.println("3 - Callable");
+        System.out.println("4 - ParallelStream");
+        System.out.println("0 - Sair");
+        optPearson = scanner.nextInt();
+        while(optPearson != 0){   
             /**Gerando id aleátorios de 1 a 100 */
-            myUser = UserRepo.getUser(users[i]);
+            System.out.println("Digite o userid: ");
+            userId = scanner.nextInt();
+            myUser = UserRepo.getUser(userId);
+            switch (optPearson) {
+                case 1:
+                    start = System.currentTimeMillis();
+                    result = pearson.getRecommendations(myUser);
+                    end = System.currentTimeMillis();
+                    break;
+                case 2:
+                    start = System.currentTimeMillis();
+                    result = pearsonExecutor.getRecommendations(myUser);
+                    end = System.currentTimeMillis();
+                case 3:
+                    start = System.currentTimeMillis();
+                    result = pearsonCallable.getRecommendations(myUser);
+                    end = System.currentTimeMillis();
+                case 4:
+                    start = System.currentTimeMillis();
+                    result = pearsonStream.getRecommendations(myUser);
+                    end = System.currentTimeMillis();                
+                default:
+                    break;
+            }
             System.out.println("\nTop 10 filmes recomendados para o usuário: " + myUser.getUserId());
-            long start = System.currentTimeMillis();
-            ArrayList<Rating> result = pearson.getRecommendations(myUser);
-            long end = System.currentTimeMillis();
-            total += end - start;
             for (Rating rating : result.subList(0, 10)) {
                 System.out.println(rating + ", " + 
                     MovieRepo.getTitle(rating.getItem()));                  
             }
-            System.out.println("Tempo " + (i+1) +": "+ (end - start)/1000.0); 
+            System.out.println("Tempo : "+ (end - start)/1000.0);
+            System.out.println();
+            System.out.println("Sistema de Recomendação");
+            System.out.println("1 - Sequencial");
+            System.out.println("2 - Executor");
+            System.out.println("3 - Callable");
+            System.out.println("4 - ParallelStream");
+            System.out.println("0 - Sair");
+            optPearson = scanner.nextInt();
         }
-        System.out.println("Tempo médio: " + (total/5.0)/1000 + " ms");
-        System.out.println();     
+        scanner.close();
+            
     }
-        
 }
+
