@@ -9,7 +9,7 @@ import JavaRecommendation.model.Movie;
 
 public class MovieRepo {
     private static HashMap<Integer, Movie> moviesMap;
-    private static String filePath;
+    private static String filePath = "src/resources/ml-100k/movies.csv";
     
     /* 
     *   Read csv movie data
@@ -65,9 +65,6 @@ public class MovieRepo {
     public static void init(){
         if(moviesMap == null){
             moviesMap = new HashMap<Integer, Movie>();
-            if(filePath == null){
-                filePath = "src/resources/ml-100k/movies.csv";
-            }
             try {
                 loadMovies(filePath);
             } catch (Exception e) {
