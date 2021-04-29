@@ -1,9 +1,10 @@
+Open: src/resources/ml-1m/ratings.dat
+Opening: src/resources/ml-1m/movies.dat
 Executor Initialized
 
 Top 10 filmes recomendados para o usuário: 19
 (3382, 6.645276), Song of Freedom (1936)
 (572, 5.5643644), Foreign Student (1994)
-(578, 5.354504), Hour of the Pig, The (1993)
 (2198, 5.0753117), Modulations (1998)
 (3542, 4.9819193), Coming Apart (1969)
 (3603, 4.975775), Gay Deceivers, The (1969)
@@ -11,65 +12,58 @@ Top 10 filmes recomendados para o usuário: 19
 (2304, 4.8792024), Love Is the Devil (1998)
 (2197, 4.8664927), Firelight (1997)
 (2444, 4.8491764), 24 7: Twenty Four Seven (1997)
-Tempo 1: 3.864
+(2760, 4.7833776), Gambler, The (A J�t�kos) (1997)
+Tempo 1: 4.345
 
-Top 10 filmes recomendados para o usuário: 75
-(3245, 5.891976), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
-(2444, 5.7013664), 24 7: Twenty Four Seven (1997)
-(578, 5.582032), Hour of the Pig, The (1993)
-(2627, 5.5649295), Endurance (1998)
-(394, 5.482944), Coldblooded (1995)
-(2198, 5.471206), Modulations (1998)
-(1553, 5.4530435), Late Bloomers (1996)
-(2342, 5.4433846), Hard Core Logo (1996)
-(989, 5.400451), Schlafes Bruder (Brother of Sleep) (1995)
-(3410, 5.3823485), Soft Fruit (1999)
-Tempo 2: 3.873
+Top 10 filmes recomendados para o usuário: 87
+(557, 4.8954096), Mamma Roma (1962)
+(1851, 4.3036585), Leather Jacket Love Story (1997)
+(167, 4.2969494), Feast of July (1995)
+(1174, 4.286625), Grosse Fatigue (1994)
+(1830, 4.0862865), Follow the Bitch (1998)
+(3517, 4.0423813), Bells, The (1926)
+(2358, 3.9965029), Savior (1998)
+(854, 3.92864), Ballad of Narayama, The (Narayama Bushiko) (1958)
+(1795, 3.924265), Callej�n de los milagros, El (1995)
+(3578, 3.9117613), Gladiator (2000)
+Tempo 2: 4.894
 
-Top 10 filmes recomendados para o usuário: 79
-(578, 5.4271164), Hour of the Pig, The (1993)
-(3542, 5.0545316), Coming Apart (1969)
-(130, 4.9799256), Angela (1995)
-(1149, 4.973066), JLG/JLG - autoportrait de d�cembre (1994)
-(3245, 4.936741), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
-(2825, 4.8771095), Rosie (1998)
-(1174, 4.8691893), Grosse Fatigue (1994)
-(2309, 4.847743), Inheritors, The (Die Siebtelbauern) (1998)
-(2999, 4.842169), Man of the Century (1999)
-(729, 4.8341665), Institute Benjamenta, or This Dream People Call Human Life (1995)
-Tempo 3: 3.239
+Top 10 filmes recomendados para o usuário: 31
+(1664, 5.5706625), N�nette et Boni (1996)
+(864, 5.290479), Wife, The (1995)
+(1174, 5.240028), Grosse Fatigue (1994)
+(2198, 5.233855), Modulations (1998)
+(106, 5.073576), Nobody Loves Me (Keiner liebt mich) (1994)
+(2825, 5.010375), Rosie (1998)
+(1117, 4.9576926), Eighth Day, The (Le Huiti�me jour ) (1996)
+(1780, 4.897024), Ayn Rand: A Sense of Life (1997)
+(2999, 4.893737), Man of the Century (1999)
+(1741, 4.841798), Midaq Alley (Callej�n de los milagros, El) (1995)
+Tempo 3: 4.738
 
-Top 10 filmes recomendados para o usuário: 78
-Exception in thread "pool-4-thread-1" java.lang.NullPointerException
-        at JavaRecommendation.controller.PearsonExecutor.getPearson(PearsonExecutor.java:123)
-        at JavaRecommendation.controller.PearsonExecutor.calculateNeighbours(PearsonExecutor.java:163)
-        at JavaRecommendation.controller.PearsonExecutor.predictRating(PearsonExecutor.java:133)
-        at JavaRecommendation.controller.PearsonExecutor.lambda$0(PearsonExecutor.java:60)
-        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-        at java.base/java.lang.Thread.run(Thread.java:834)
-(3382, 6.72987), Song of Freedom (1936)
-(1149, 5.5935736), JLG/JLG - autoportrait de d�cembre (1994)
-(729, 5.5052214), Institute Benjamenta, or This Dream People Call Human Life (1995)
-(2557, 5.4869914), I Stand Alone (Seul contre tous) (1998)
-(3245, 5.467924), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
-(1664, 5.4113646), N�nette et Boni (1996)
-(1787, 5.207143), Paralyzing Fear: The Story of Polio in America, A (1998)
-(989, 5.05188), Schlafes Bruder (Brother of Sleep) (1995)
-(2304, 5.0368204), Love Is the Devil (1998)
-(1117, 4.9685297), Eighth Day, The (Le Huiti�me jour ) (1996)
-Tempo 4: 5.101
+Top 10 filmes recomendados para o usuário: 27
+(572, 6.1632442), Foreign Student (1994)
+(2765, 6.032177), Acid House, The (1998)
+(2760, 5.8104677), Gambler, The (A J�t�kos) (1997)
+(3603, 5.5746546), Gay Deceivers, The (1969)
+(989, 5.5661654), Schlafes Bruder (Brother of Sleep) (1995)
+(2503, 5.5367947), Apple, The (Sib) (1998)
+(130, 5.5061927), Angela (1995)
+(2673, 5.4466777), Eternity and a Day (Mia eoniotita ke mia mera ) (1998)
+(860, 5.4259315), Maybe, Maybe Not (Bewegte Mann, Der) (1994)
+(1138, 5.398638), Dadetown (1995)
+Tempo 4: 4.04
 
-Top 10 filmes recomendados para o usuário: 64
-(2705, 6.276227), Late August, Early September (Fin ao�t, d�but septembre) (1998)
-(729, 6.14727), Institute Benjamenta, or This Dream People Call Human Life (1995)
-(1787, 5.698148), Paralyzing Fear: The Story of Polio in America, A (1998)
-(1664, 5.6525555), N�nette et Boni (1996)
-(1851, 5.638247), Leather Jacket Love Story (1997)
-(1553, 5.600954), Late Bloomers (1996)
-(2332, 5.565348), Belly (1998)
-(989, 5.542885), Schlafes Bruder (Brother of Sleep) (1995)
-(2999, 5.459872), Man of the Century (1999)
-(3410, 5.4153476), Soft Fruit (1999)
-Tempo 5: 3.606
-Tempo médio: 3.9366 ms
+Top 10 filmes recomendados para o usuário: 96
+(3382, 6.6776657), Song of Freedom (1936)
+(2063, 5.733017), Seventh Heaven (Le Septi�me ciel) (1997)
+(2825, 5.733017), Rosie (1998)
+(557, 5.5617766), Mamma Roma (1962)
+(1787, 5.154938), Paralyzing Fear: The Story of Polio in America, A (1998)
+(167, 5.106878), Feast of July (1995)
+(2197, 5.040451), Firelight (1997)
+(989, 4.999675), Schlafes Bruder (Brother of Sleep) (1995)
+(1149, 4.913473), JLG/JLG - autoportrait de d�cembre (1994)
+(789, 4.8902917), I, Worst of All (Yo, la peor de todas) (1990)
+Tempo 5: 3.155
+Tempo médio: 4.2344 ms

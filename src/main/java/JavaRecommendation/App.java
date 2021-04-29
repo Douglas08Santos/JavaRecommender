@@ -17,20 +17,20 @@ public class App
 {
     public static void main( String[] args )
     {
-        String movieFile = "src/resources/ml-10m/movies.dat";
-        String ratingFile = "src/resources/ml-10m/ratings.dat";
+        String movieFile = "src/resources/ml-1m/movies.dat";
+        String ratingFile = "src/resources/ml-1m/ratings.dat";
         UserRepo.init(ratingFile);
         MovieRepo.init(movieFile);
-        int nTest = 5;
-        Pearson pearson = new Pearson();
+        int users[] = {19, 87, 30, 27, 96};
+        //Pearson pearson = new Pearson();
         //PearsonExecutor pearson = new PearsonExecutor();
         //PearsonCallable pearson = new PearsonCallable();
-        //PearsonParallelStream pearson = new PearsonParallelStream();
+        PearsonParallelStream pearson = new PearsonParallelStream();
         User myUser;
         long total = 0;
-        for (int i = 0; i < nTest; i++) {
+        for (int i = 0; i < users.length; i++) {
             /**Gerando id aleátorios de 1 a 100 */
-            myUser = UserRepo.getUser(new Random().nextInt(100) + 1);
+            myUser = UserRepo.getUser(users[i]);
             System.out.println("\nTop 10 filmes recomendados para o usuário: " + myUser.getUserId());
             long start = System.currentTimeMillis();
             ArrayList<Rating> result = pearson.getRecommendations(myUser);

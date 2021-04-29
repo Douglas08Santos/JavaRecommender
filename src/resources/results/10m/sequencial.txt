@@ -1,0 +1,69 @@
+Open: src/resources/ml-10m/ratings.dat
+Opening: src/resources/ml-10m/movies.dat
+Sequencial Initialized
+
+Top 10 filmes recomendados para o usuário: 19
+(42783, 5.912163), Shadows of Forgotten Ancestors (1964)
+(64986, 5.7652645), Birds of America (2008)
+(3226, 5.745141), Hellhounds on My Trail (1999)
+(32792, 5.4628005), Red Desert, The (Deserto rosso, Il) (1964)
+(33264, 5.4153805), Satan's Tango (Sátántangó) (1994)
+(60336, 5.412163), Bad Blood (Mauvais sang) (1986)
+(60391, 5.412163), Aleksandra (2007)
+(60990, 5.412163), End of Summer, The (Kohayagawa-ke no aki) (1961)
+(61236, 5.3903923), Waltz With Bashir (Vals im Bashir) (2008)
+(5849, 5.3277636), I'm Starting From Three (Ricomincio da Tre) (1981)
+Tempo 1: 175.521
+
+Top 10 filmes recomendados para o usuário: 87
+(3382, 6.6308775), Song of Freedom (1936)
+(42783, 6.5051804), Shadows of Forgotten Ancestors (1964)
+(61742, 6.253148), Maradona by Kusturica (2008)
+(3226, 6.0219007), Hellhounds on My Trail (1999)
+(60336, 6.0051804), Bad Blood (Mauvais sang) (1986)
+(64280, 5.860063), Hospital (1970)
+(26228, 5.850683), Swedish Love Story, A (Kärlekshistoria, En) (1970)
+(63179, 5.8147974), Tokyo! (2008)
+(64408, 5.785257), Sun Shines Bright, The (1953)
+(57484, 5.737593), 3 Bad Men (1926)
+Tempo 2: 168.589
+
+Top 10 filmes recomendados para o usuário: 30
+(42783, 6.674856), Shadows of Forgotten Ancestors (1964)
+(61742, 6.6495175), Maradona by Kusturica (2008)
+(32444, 6.2395506), Carmen (1983)
+(60336, 6.174856), Bad Blood (Mauvais sang) (1986)
+(65001, 6.115034), Constantine's Sword (2007)
+(26228, 6.061712), Swedish Love Story, A (Kärlekshistoria, En) (1970)
+(65037, 5.9931498), Ben X (2007)
+(63179, 5.984473), Tokyo! (2008)
+(60990, 5.8634577), End of Summer, The (Kohayagawa-ke no aki) (1961)
+(50477, 5.843398), Testament of Orpheus, The (Testament d'Orphée) (1960)
+Tempo 3: 185.665
+
+Top 10 filmes recomendados para o usuário: 27
+(42783, 5.2835207), Shadows of Forgotten Ancestors (1964)
+(61742, 5.150929), Maradona by Kusturica (2008)
+(3226, 5.116499), Hellhounds on My Trail (1999)
+(60983, 5.04564), Eve and the Fire Horse (2005)
+(33264, 4.7867384), Satan's Tango (Sátántangó) (1994)
+(60336, 4.7835207), Bad Blood (Mauvais sang) (1986)
+(64280, 4.7360373), Hospital (1970)
+(7140, 4.671053), Legend of Leigh Bowery, The (2002)
+(53883, 4.645277), Power of Nightmares: The Rise of the Politics of Fear, The (2004)
+(8339, 4.600839), H.M.S. Defiant (1962)
+Tempo 4: 189.518
+
+Top 10 filmes recomendados para o usuário: 96
+(3382, 6.224201), Song of Freedom (1936)
+(61742, 5.691841), Maradona by Kusturica (2008)
+(32657, 5.4739885), Man Who Planted Trees, The (Homme qui plantait des arbres, L') (1987)
+(58898, 5.3298025), Aerial, The (La Antena) (2007)
+(63179, 5.0267963), Tokyo! (2008)
+(63645, 5.0267963), Free Will, The (Der Freie Wille) (2006)
+(8686, 5.0016003), Morituri (1965)
+(44653, 4.9735956), Money (Argent, L') (1983)
+(6256, 4.9209795), House with Laughing Windows, The (La Casa dalle Finestre che Ridono) (1976)
+(4538, 4.8817215), Salome's Last Dance (1988)
+Tempo 5: 182.109
+Tempo médio: 180.2804 ms

@@ -1,67 +1,69 @@
+Open: src/resources/ml-1m/ratings.dat
+Opening: src/resources/ml-1m/movies.dat
 Parallel Initialized
 
-Top 10 filmes recomendados para o usuário: 49
-(557, 5.794813), Mamma Roma (1962)
-(578, 5.3946443), Hour of the Pig, The (1993)
-(2765, 5.1749115), Acid House, The (1998)
-(3542, 5.122333), Coming Apart (1969)
-(3603, 5.116189), Gay Deceivers, The (1969)
-(2503, 5.0786743), Apple, The (Sib) (1998)
-(789, 4.9983163), I, Worst of All (Yo, la peor de todas) (1990)
-(1830, 4.98569), Follow the Bitch (1998)
-(2999, 4.860444), Man of the Century (1999)
-(3522, 4.859117), Sacco and Vanzetti (Sacco e Vanzetti) (1971)
-Tempo 1: 3.78
+Top 10 filmes recomendados para o usuário: 19
+(3382, 6.645276), Song of Freedom (1936)
+(572, 5.5643644), Foreign Student (1994)
+(578, 5.354504), Hour of the Pig, The (1993)
+(2198, 5.0753117), Modulations (1998)
+(3542, 4.9819193), Coming Apart (1969)
+(3603, 4.975775), Gay Deceivers, The (1969)
+(2309, 4.8923206), Inheritors, The (Die Siebtelbauern) (1998)
+(2304, 4.8792024), Love Is the Devil (1998)
+(2197, 4.8664927), Firelight (1997)
+(2760, 4.7833776), Gambler, The (A J�t�kos) (1997)
+Tempo 1: 4.183
 
-Top 10 filmes recomendados para o usuário: 15
-(729, 5.451462), Institute Benjamenta, or This Dream People Call Human Life (1995)
-(557, 5.4052334), Mamma Roma (1962)
-(572, 5.315199), Foreign Student (1994)
-(823, 4.8767815), Collectionneuse, La (1967)
-(1851, 4.813482), Leather Jacket Love Story (1997)
-(2342, 4.6238146), Hard Core Logo (1996)
-(787, 4.530761), Gate of Heavenly Peace, The (1995)
-(3578, 4.5020027), Gladiator (2000)
-(758, 4.451462), Jar, The (Khomreh) (1992)
-(3517, 4.443165), Bells, The (1926)
-Tempo 2: 7.111
+Top 10 filmes recomendados para o usuário: 87
+(557, 4.8954096), Mamma Roma (1962)
+(1851, 4.3036585), Leather Jacket Love Story (1997)
+(167, 4.2969494), Feast of July (1995)
+(1174, 4.286625), Grosse Fatigue (1994)
+(1830, 4.0862865), Follow the Bitch (1998)
+(3517, 4.0423813), Bells, The (1926)
+(2358, 3.9965029), Savior (1998)
+(854, 3.92864), Ballad of Narayama, The (Narayama Bushiko) (1958)
+(1795, 3.924265), Callej�n de los milagros, El (1995)
+(3578, 3.9117613), Gladiator (2000)
+Tempo 2: 4.293
 
-Top 10 filmes recomendados para o usuário: 67
-(2981, 7.094097), Brother, Can You Spare a Dime? (1975)
-(2215, 6.496743), Rich and Strange (1932)
-(2557, 6.4249535), I Stand Alone (Seul contre tous) (1998)
-(2850, 6.4249535), Public Access (1993)
-(1149, 6.4249535), JLG/JLG - autoportrait de d�cembre (1994)
-(1574, 6.257379), Fall (1997)
-(3245, 6.199976), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
-(864, 6.0434923), Wife, The (1995)
-(751, 5.911381), Careful (1992)
-(1787, 5.846875), Paralyzing Fear: The Story of Polio in America, A (1998)
-Tempo 3: 2.5
+Top 10 filmes recomendados para o usuário: 31
+(1664, 5.5706625), N�nette et Boni (1996)
+(864, 5.290479), Wife, The (1995)
+(1174, 5.240028), Grosse Fatigue (1994)
+(2198, 5.233855), Modulations (1998)
+(106, 5.073576), Nobody Loves Me (Keiner liebt mich) (1994)
+(2825, 5.010375), Rosie (1998)
+(1117, 4.9576926), Eighth Day, The (Le Huiti�me jour ) (1996)
+(1780, 4.897024), Ayn Rand: A Sense of Life (1997)
+(2999, 4.893737), Man of the Century (1999)
+(758, 4.859171), Jar, The (Khomreh) (1992)
+Tempo 3: 3.862
 
-Top 10 filmes recomendados para o usuário: 79
-(578, 5.4271164), Hour of the Pig, The (1993)
-(3542, 5.0545316), Coming Apart (1969)
-(130, 4.9799256), Angela (1995)
-(1149, 4.973066), JLG/JLG - autoportrait de d�cembre (1994)
-(3245, 4.936741), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
-(2825, 4.8771095), Rosie (1998)
-(1174, 4.8691893), Grosse Fatigue (1994)
-(2309, 4.847743), Inheritors, The (Die Siebtelbauern) (1998)
-(2999, 4.842169), Man of the Century (1999)
-(729, 4.8341665), Institute Benjamenta, or This Dream People Call Human Life (1995)
-Tempo 4: 4.15
+Top 10 filmes recomendados para o usuário: 27
+(572, 6.1632442), Foreign Student (1994)
+(2765, 6.032177), Acid House, The (1998)
+(2760, 5.8104677), Gambler, The (A J�t�kos) (1997)
+(1851, 5.6615276), Leather Jacket Love Story (1997)
+(3542, 5.580799), Coming Apart (1969)
+(3603, 5.5746546), Gay Deceivers, The (1969)
+(989, 5.5661654), Schlafes Bruder (Brother of Sleep) (1995)
+(2503, 5.5367947), Apple, The (Sib) (1998)
+(130, 5.5061927), Angela (1995)
+(2673, 5.4466777), Eternity and a Day (Mia eoniotita ke mia mera ) (1998)
+Tempo 4: 3.423
 
-Top 10 filmes recomendados para o usuário: 13
-(3382, 6.461616), Song of Freedom (1936)
-(2557, 5.516968), I Stand Alone (Seul contre tous) (1998)
-(2705, 5.516968), Late August, Early September (Fin ao�t, d�but septembre) (1998)
-(729, 5.3180513), Institute Benjamenta, or This Dream People Call Human Life (1995)
-(404, 4.9673204), Brother Minister: The Assassination of Malcolm X (1994)
-(3517, 4.8370304), Bells, The (1926)
-(1567, 4.779601), Last Time I Committed Suicide, The (1997)
-(2342, 4.7191396), Hard Core Logo (1996)
-(1149, 4.67412), JLG/JLG - autoportrait de d�cembre (1994)
-(1830, 4.6616163), Follow the Bitch (1998)
-Tempo 5: 4.676
-Tempo médio: 4.4434 ms
+Top 10 filmes recomendados para o usuário: 96
+(3382, 6.6776657), Song of Freedom (1936)
+(2825, 5.733017), Rosie (1998)
+(2063, 5.733017), Seventh Heaven (Le Septi�me ciel) (1997)
+(557, 5.5617766), Mamma Roma (1962)
+(1787, 5.154938), Paralyzing Fear: The Story of Polio in America, A (1998)
+(167, 5.106878), Feast of July (1995)
+(2197, 5.040451), Firelight (1997)
+(989, 4.999675), Schlafes Bruder (Brother of Sleep) (1995)
+(1149, 4.913473), JLG/JLG - autoportrait de d�cembre (1994)
+(789, 4.8902917), I, Worst of All (Yo, la peor de todas) (1990)
+Tempo 5: 2.363
+Tempo médio: 3.6248 ms

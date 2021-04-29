@@ -1,0 +1,69 @@
+Open: src/resources/ml-100k/ratings.csv
+Opening: src/resources/ml-100k/movies.csv
+Callable Initialized
+
+Top 10 filmes recomendados para o usuário: 19
+(2314, 4.899159), Beloved (1998)
+(4055, 4.899159), Panic (2000)
+(6591, 4.899159), "Magdalene Sisters, The (2002)"
+(2303, 4.615916), Nashville (1975)
+(25947, 4.615916), Unfaithfully Yours (1948)
+(94070, 4.59637), "Best Exotic Marigold Hotel, The (2011)"
+(26810, 4.5387697), Bad Boy Bubby (1993)
+(30803, 4.4667716), 3-Iron (Bin-jip) (2004)
+(3379, 4.465347), On the Beach (1959)
+(68945, 4.465347), Neon Genesis Evangelion: Death & Rebirth (Shin seiki Evangelion Gekijô-ban: Shito shinsei) (1997)
+Tempo 1: 1.278
+
+Top 10 filmes recomendados para o usuário: 87
+(117192, 6.5262938), Doctor Who: The Time of the Doctor (2013)
+(132333, 6.1050096), Seve (2014)
+(5490, 6.1050096), The Big Bus (1976)
+(5915, 6.1050096), Victory (a.k.a. Escape to Victory) (1981)
+(25947, 5.9609), Unfaithfully Yours (1948)
+(56715, 5.8748026), Wristcutters: A Love Story (2006)
+(3379, 5.810331), On the Beach (1959)
+(96004, 5.810331), Dragon Ball Z: The History of Trunks (Doragon bôru Z: Zetsubô e no hankô!! Nokosareta chô senshi - Gohan to Torankusu) (1993)
+(105355, 5.7345037), Blue Is the Warmest Color (La vie d'Adèle) (2013)
+(3086, 5.650811), Babes in Toyland (1934)
+Tempo 2: 0.761
+
+Top 10 filmes recomendados para o usuário: 31
+(40491, 6.674546), "Match Factory Girl, The (Tulitikkutehtaan tyttö) (1990)"
+(156605, 6.1745453), Paterson
+(132333, 6.072629), Seve (2014)
+(5490, 6.072629), The Big Bus (1976)
+(5915, 6.072629), Victory (a.k.a. Escape to Victory) (1981)
+(136850, 6.050435), Villain (1971)
+(25947, 5.9285192), Unfaithfully Yours (1948)
+(3379, 5.7779503), On the Beach (1959)
+(170355, 5.7779503), Mulholland Dr. (1999)
+(67618, 5.6862698), Strictly Sexual (2008)
+Tempo 3: 0.737
+
+Top 10 filmes recomendados para o usuário: 27
+(3567, 5.908148), Bossa Nova (2000)
+(2314, 5.8399105), Beloved (1998)
+(132333, 5.700777), Seve (2014)
+(5490, 5.700777), The Big Bus (1976)
+(5915, 5.700777), Victory (a.k.a. Escape to Victory) (1981)
+(25947, 5.556667), Unfaithfully Yours (1948)
+(7842, 5.5279727), Dune (2000)
+(3379, 5.406098), On the Beach (1959)
+(170355, 5.406098), Mulholland Dr. (1999)
+(89118, 5.3681808), "Skin I Live In, The (La piel que habito) (2011)"
+Tempo 4: 0.58
+
+Top 10 filmes recomendados para o usuário: 96
+(3567, 6.2446156), Bossa Nova (2000)
+(132333, 6.037244), Seve (2014)
+(5490, 6.037244), The Big Bus (1976)
+(8542, 6.037244), "Day at the Races, A (1937)"
+(1658, 5.9376783), "Life Less Ordinary, A (1997)"
+(25947, 5.893134), Unfaithfully Yours (1948)
+(26810, 5.799808), Bad Boy Bubby (1993)
+(5951, 5.781852), Morvern Callar (2002)
+(3379, 5.7425656), On the Beach (1959)
+(68945, 5.7425656), Neon Genesis Evangelion: Death & Rebirth (Shin seiki Evangelion Gekijô-ban: Shito shinsei) (1997)
+Tempo 5: 0.752
+Tempo médio: 0.8216 ms
