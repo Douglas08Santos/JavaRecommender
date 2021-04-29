@@ -2,6 +2,7 @@ package JavaRecommendation.controller;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import JavaRecommendation.data.MovieRepo;
 import JavaRecommendation.data.UserRepo;
@@ -10,33 +11,16 @@ import JavaRecommendation.interfaces.User;
 import JavaRecommendation.model.Rating;
 
 public class PearsonParallelStream implements SimilarityMetric{
-
-    private double[][] simMatrix = null;
     private ArrayList<User> usersList;
     ArrayList<Rating> recommendations;
     private User lastUser = null;
 
     public PearsonParallelStream(){
         ArrayList<User> users = UserRepo.getUsers();
-        simMatrix = new double[users.size()][users.size()];
         usersList = users;
-        calculateAllSimilarity();
         System.out.println("Parallel Initialized");
-
     }
 
-    /**
-     * Parallel Stream
-     */
-    private void calculateAllSimilarity() {
-        usersList.parallelStream()
-        .forEach(user1 -> {
-            usersList.subList(usersList.indexOf(user1), usersList.size()).parallelStream()
-            .forEach(user2 -> {
-                calculateSimilarity(user1, user2);
-            });
-        });
-    }
     
     @Override
     public void calculateSimilarity(User user1, User user2) {
@@ -65,16 +49,16 @@ public class PearsonParallelStream implements SimilarityMetric{
             int sizeCommon = commonMovies.size();
             if (sizeCommon < 50) {
                 double value = (sizeCommon * (1.0/50)) * (top/botton);
-                simMatrix[user1.getInternalId()][user2.getInternalId()] = value;
-                simMatrix[user2.getInternalId()][user1.getInternalId()] = value;
+                user1.addSim(user2.getUserId(), value);
+                user2.addSim(user1.getUserId(), value);
             } else {
                 double value = top / botton;
-                simMatrix[user1.getInternalId()][user2.getInternalId()] = value;
-                simMatrix[user2.getInternalId()][user1.getInternalId()] = value;
+                user1.addSim(user2.getUserId(), value);
+                user2.addSim(user1.getUserId(), value);
             }
         } else {
-            simMatrix[user1.getInternalId()][user2.getInternalId()] = 0;
-            simMatrix[user2.getInternalId()][user1.getInternalId()] = 0;           
+            user1.addSim(user2.getUserId(), 0.0);
+            user2.addSim(user1.getUserId(), 0.0);          
         }
     }
     /**
@@ -84,7 +68,13 @@ public class PearsonParallelStream implements SimilarityMetric{
      * @return O valor de similaridades entre os dois usuários
      */
     private double getPearson(User user, User other) {
-        return simMatrix[user.getInternalId()][other.getInternalId()];
+        if (user.hasSim(other.getUserId())) {
+            return user.getSim(other.getUserId());
+        } else {
+            //Se não possui sim, calcula
+            calculateSimilarity(user, other);
+            return user.getSim(other.getUserId());
+        }
     }
     
     @Override
@@ -111,13 +101,19 @@ public class PearsonParallelStream implements SimilarityMetric{
      */
     private void generateRecommendations(User user){
         recommendations = new ArrayList<Rating>();
-       
+        usersList.parallelStream().forEach(curr ->{
+            if(user.getUserId() != curr.getUserId()){
+                getPearson(user, curr);                    
+            }
+        });
         MovieRepo.getMovies().parallelStream()
         .forEach(movie -> {
             float predictedRating = predictRating(user, movie.getMovieId(), 0.0f);            
             Rating rating = new Rating(movie.getMovieId(), predictedRating);
             recommendations.add(rating);
         });
+
+        Collections.sort(recommendations, Collections.reverseOrder());
 
     }
 

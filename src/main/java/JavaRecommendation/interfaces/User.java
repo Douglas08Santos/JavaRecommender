@@ -12,5 +12,8 @@ public interface User {
 	public int numRatings();
 	public float getAvgRatings();
 	public ArrayList<Integer> getMoviesRated();
+	public void addSim(Integer otherId, Double sim);
+	public boolean hasSim(Integer otherId);
+	public Double getSim(Integer otherId);
 
 }

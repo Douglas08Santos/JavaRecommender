@@ -1,0 +1,67 @@
+Parallel Initialized
+
+Top 10 filmes recomendados para o usuário: 49
+(557, 5.794813), Mamma Roma (1962)
+(578, 5.3946443), Hour of the Pig, The (1993)
+(2765, 5.1749115), Acid House, The (1998)
+(3542, 5.122333), Coming Apart (1969)
+(3603, 5.116189), Gay Deceivers, The (1969)
+(2503, 5.0786743), Apple, The (Sib) (1998)
+(789, 4.9983163), I, Worst of All (Yo, la peor de todas) (1990)
+(1830, 4.98569), Follow the Bitch (1998)
+(2999, 4.860444), Man of the Century (1999)
+(3522, 4.859117), Sacco and Vanzetti (Sacco e Vanzetti) (1971)
+Tempo 1: 3.78
+
+Top 10 filmes recomendados para o usuário: 15
+(729, 5.451462), Institute Benjamenta, or This Dream People Call Human Life (1995)
+(557, 5.4052334), Mamma Roma (1962)
+(572, 5.315199), Foreign Student (1994)
+(823, 4.8767815), Collectionneuse, La (1967)
+(1851, 4.813482), Leather Jacket Love Story (1997)
+(2342, 4.6238146), Hard Core Logo (1996)
+(787, 4.530761), Gate of Heavenly Peace, The (1995)
+(3578, 4.5020027), Gladiator (2000)
+(758, 4.451462), Jar, The (Khomreh) (1992)
+(3517, 4.443165), Bells, The (1926)
+Tempo 2: 7.111
+
+Top 10 filmes recomendados para o usuário: 67
+(2981, 7.094097), Brother, Can You Spare a Dime? (1975)
+(2215, 6.496743), Rich and Strange (1932)
+(2557, 6.4249535), I Stand Alone (Seul contre tous) (1998)
+(2850, 6.4249535), Public Access (1993)
+(1149, 6.4249535), JLG/JLG - autoportrait de d�cembre (1994)
+(1574, 6.257379), Fall (1997)
+(3245, 6.199976), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
+(864, 6.0434923), Wife, The (1995)
+(751, 5.911381), Careful (1992)
+(1787, 5.846875), Paralyzing Fear: The Story of Polio in America, A (1998)
+Tempo 3: 2.5
+
+Top 10 filmes recomendados para o usuário: 79
+(578, 5.4271164), Hour of the Pig, The (1993)
+(3542, 5.0545316), Coming Apart (1969)
+(130, 4.9799256), Angela (1995)
+(1149, 4.973066), JLG/JLG - autoportrait de d�cembre (1994)
+(3245, 4.936741), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
+(2825, 4.8771095), Rosie (1998)
+(1174, 4.8691893), Grosse Fatigue (1994)
+(2309, 4.847743), Inheritors, The (Die Siebtelbauern) (1998)
+(2999, 4.842169), Man of the Century (1999)
+(729, 4.8341665), Institute Benjamenta, or This Dream People Call Human Life (1995)
+Tempo 4: 4.15
+
+Top 10 filmes recomendados para o usuário: 13
+(3382, 6.461616), Song of Freedom (1936)
+(2557, 5.516968), I Stand Alone (Seul contre tous) (1998)
+(2705, 5.516968), Late August, Early September (Fin ao�t, d�but septembre) (1998)
+(729, 5.3180513), Institute Benjamenta, or This Dream People Call Human Life (1995)
+(404, 4.9673204), Brother Minister: The Assassination of Malcolm X (1994)
+(3517, 4.8370304), Bells, The (1926)
+(1567, 4.779601), Last Time I Committed Suicide, The (1997)
+(2342, 4.7191396), Hard Core Logo (1996)
+(1149, 4.67412), JLG/JLG - autoportrait de d�cembre (1994)
+(1830, 4.6616163), Follow the Bitch (1998)
+Tempo 5: 4.676
+Tempo médio: 4.4434 ms

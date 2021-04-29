@@ -12,12 +12,12 @@ public class MyUser implements User{
     private Integer userId;
     private int internalId;
     private HashMap<Integer, Rating> userRatings;
-    private HashMap<Integer, Rating> targetMovies;
+    private HashMap<Integer, Double> usersSim;
 
     public MyUser(Integer newUserId){
         userId = newUserId;
         userRatings = new HashMap<Integer, Rating>();
-        targetMovies = new HashMap<Integer, Rating>();
+        usersSim = new HashMap<Integer, Double>();
         internalId = COUNT;
         COUNT++;
     }
@@ -34,8 +34,8 @@ public class MyUser implements User{
     public HashMap<Integer, Rating> getUserRatings() {
         return userRatings;
     }
-    public HashMap<Integer, Rating> getTargetMovies() {
-        return targetMovies;
+    public HashMap<Integer, Double> getUsersSim() {
+        return usersSim;
     }
 
     @Override
@@ -43,7 +43,6 @@ public class MyUser implements User{
         userRatings.put(movieId, new Rating(movieId, rating));
         
     }
-
     @Override
     public boolean hasRating(Integer movieId) {
         return userRatings.containsKey(movieId);
@@ -104,8 +103,7 @@ public class MyUser implements User{
             return result;
         } else {
             return -1;
-        }
-        
+        }        
     }
 
     @Override
@@ -115,6 +113,25 @@ public class MyUser implements User{
             result.add(movieId);
         }
         return result;
+    }
+
+    @Override
+    public void addSim(Integer otherId, Double sim) {
+        usersSim.put(otherId, sim);        
+    }
+
+    @Override
+    public boolean hasSim(Integer otherId) {
+       return usersSim.containsKey(otherId);
+    }
+
+    @Override
+    public Double getSim(Integer otherId) {
+        if (hasSim(otherId)) {
+            return usersSim.get(otherId);
+        }else{
+            return -1.0;
+        }
     }
 
 

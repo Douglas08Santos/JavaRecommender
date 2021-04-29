@@ -2,6 +2,7 @@ package JavaRecommendation.controller;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -13,7 +14,6 @@ import JavaRecommendation.model.Movie;
 import JavaRecommendation.model.Rating;
 
 public class PearsonExecutor implements SimilarityMetric{
-    private double[][] simMatrix = null;
     private ArrayList<User> usersList;
     ArrayList<Rating> recommendations;
     private User lastUser = null;  
@@ -21,37 +21,8 @@ public class PearsonExecutor implements SimilarityMetric{
 
     public PearsonExecutor(){
         ArrayList<User> users = UserRepo.getUsers();
-        simMatrix = new double[users.size()][users.size()];
-        usersList = users;
-        calculateAllSimilarity();      
+        usersList = users;    
         System.out.println("Executor Initialized");
-
-    }
-
-    /**
-     * O executor foi usado para inicializar a matriz de Similaridades,
-     * afinal ela é necessaria nos proximos calculos
-     */
-    private void calculateAllSimilarity() {
-        ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
-        for (int i = 0; i < usersList.size(); i++) {
-            User user1 = usersList.get(i);
-            int current = i;
-            //*************************************************** */ 
-            Runnable task = () -> {
-                for (int j = current; j < usersList.size(); j++) {              
-                    User user2 = usersList.get(j);
-                    calculateSimilarity(user1, user2);
-                }
-            };
-            executorService.execute(task);
-            //*************************************************** */ 
-            
-        }
-
-        executorService.shutdown();
-        while(!executorService.isTerminated()){
-        }
     }
 
       /**
@@ -99,6 +70,7 @@ public class PearsonExecutor implements SimilarityMetric{
         while(!executorService.isTerminated()){
 
         }
+        Collections.sort(recommendations, Collections.reverseOrder());
         
     } 
     
@@ -128,16 +100,16 @@ public class PearsonExecutor implements SimilarityMetric{
             int sizeCommon = commonMovies.size();
             if (sizeCommon < 50) {
                 double value = (sizeCommon * (1.0/50)) * (top/botton);
-                simMatrix[user1.getInternalId()][user2.getInternalId()] = value;
-                simMatrix[user2.getInternalId()][user1.getInternalId()] = value;
+                user1.addSim(user2.getUserId(), value);
+                user2.addSim(user1.getUserId(), value);
             } else {
                 double value = top / botton;
-                simMatrix[user1.getInternalId()][user2.getInternalId()] = value;
-                simMatrix[user2.getInternalId()][user1.getInternalId()] = value;
+                user1.addSim(user2.getUserId(), value);
+                user2.addSim(user1.getUserId(), value);
             }
         } else {
-            simMatrix[user1.getInternalId()][user2.getInternalId()] = 0;
-            simMatrix[user2.getInternalId()][user1.getInternalId()] = 0;           
+            user1.addSim(user2.getUserId(), 0.);
+            user2.addSim(user1.getUserId(), 0.);           
         }
     }
     /**
@@ -147,7 +119,13 @@ public class PearsonExecutor implements SimilarityMetric{
      * @return O valor de similaridades entre os dois usuários
      */
     private double getPearson(User user, User other) {
-        return simMatrix[user.getInternalId()][other.getInternalId()];
+        if (user.hasSim(other.getUserId())) {
+            return user.getSim(other.getUserId());
+        } else {
+            //Se não possui sim, calcula
+            calculateSimilarity(user, other);
+            return user.getSim(other.getUserId());
+        }
     }
     
     @Override
@@ -155,8 +133,6 @@ public class PearsonExecutor implements SimilarityMetric{
         ArrayList<User> neighbours = calculateNeighbours(user, threshold);
         float top = 0, botton = 0;
         float avgUser = user.getAvgRatings();
-
-
         for (User neigh : neighbours) {
             if (neigh.hasRating(movieId)) {
                 top += getPearson(user, neigh) * (neigh.getRating(movieId) - neigh.getAvgRatings());

@@ -10,20 +10,24 @@ import JavaRecommendation.model.MyUser;
 
 public class UserRepo {
     private static HashMap<Integer, User> usersMap;
-    private static String csvPath;
+    private static String filePath;
     @SuppressWarnings("unused")
-    private static void loadUsers(String csvPath) {
-        System.out.println("Loading ratings...");
-        //String csvPath = "src/resources/ml-100k/ratings.csv";
+    private static void loadUsers(String filePath) {
         try {
-            System.out.println("Open: " + csvPath);
-            FileReader fileReader = new FileReader(csvPath);
+            System.out.println("Open: " + filePath);
+            FileReader fileReader = new FileReader(filePath);
             BufferedReader reader = new BufferedReader(fileReader);
             String header = reader.readLine();
             String line = "";
+            String limite = "";
+            if (filePath.contains(".dat")) {
+                limite = "::";
+            } else {
+                limite = ",";
+            }
             int count = 0;
             while((line = reader.readLine()) != null){
-                String[] data = line.split(",");
+                String[] data = line.split(limite);
                 Integer userId = Integer.parseInt(data[0]);
                 Integer movieId = Integer.parseInt(data[1]);
                 Float rating = Float.parseFloat(data[2]);
@@ -35,7 +39,6 @@ public class UserRepo {
                 
             }
             reader.close();
-            System.out.println("Load ratings...");
         } catch (Exception e) {
             e.printStackTrace();
         }  
@@ -51,10 +54,10 @@ public class UserRepo {
     public static void init(){
         if(usersMap == null){
             usersMap = new HashMap<Integer, User>();
-            if (csvPath == null) {
-                csvPath = "src/resources/ml-100k/ratings.csv";
+            if (filePath == null) {
+                filePath = "src/resources/ml-100k/ratings.csv";
             }
-            loadUsers(csvPath);
+            loadUsers(filePath);
         }
     }
 

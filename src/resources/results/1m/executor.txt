@@ -1,0 +1,75 @@
+Executor Initialized
+
+Top 10 filmes recomendados para o usuário: 19
+(3382, 6.645276), Song of Freedom (1936)
+(572, 5.5643644), Foreign Student (1994)
+(578, 5.354504), Hour of the Pig, The (1993)
+(2198, 5.0753117), Modulations (1998)
+(3542, 4.9819193), Coming Apart (1969)
+(3603, 4.975775), Gay Deceivers, The (1969)
+(2309, 4.8923206), Inheritors, The (Die Siebtelbauern) (1998)
+(2304, 4.8792024), Love Is the Devil (1998)
+(2197, 4.8664927), Firelight (1997)
+(2444, 4.8491764), 24 7: Twenty Four Seven (1997)
+Tempo 1: 3.864
+
+Top 10 filmes recomendados para o usuário: 75
+(3245, 5.891976), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
+(2444, 5.7013664), 24 7: Twenty Four Seven (1997)
+(578, 5.582032), Hour of the Pig, The (1993)
+(2627, 5.5649295), Endurance (1998)
+(394, 5.482944), Coldblooded (1995)
+(2198, 5.471206), Modulations (1998)
+(1553, 5.4530435), Late Bloomers (1996)
+(2342, 5.4433846), Hard Core Logo (1996)
+(989, 5.400451), Schlafes Bruder (Brother of Sleep) (1995)
+(3410, 5.3823485), Soft Fruit (1999)
+Tempo 2: 3.873
+
+Top 10 filmes recomendados para o usuário: 79
+(578, 5.4271164), Hour of the Pig, The (1993)
+(3542, 5.0545316), Coming Apart (1969)
+(130, 4.9799256), Angela (1995)
+(1149, 4.973066), JLG/JLG - autoportrait de d�cembre (1994)
+(3245, 4.936741), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
+(2825, 4.8771095), Rosie (1998)
+(1174, 4.8691893), Grosse Fatigue (1994)
+(2309, 4.847743), Inheritors, The (Die Siebtelbauern) (1998)
+(2999, 4.842169), Man of the Century (1999)
+(729, 4.8341665), Institute Benjamenta, or This Dream People Call Human Life (1995)
+Tempo 3: 3.239
+
+Top 10 filmes recomendados para o usuário: 78
+Exception in thread "pool-4-thread-1" java.lang.NullPointerException
+        at JavaRecommendation.controller.PearsonExecutor.getPearson(PearsonExecutor.java:123)
+        at JavaRecommendation.controller.PearsonExecutor.calculateNeighbours(PearsonExecutor.java:163)
+        at JavaRecommendation.controller.PearsonExecutor.predictRating(PearsonExecutor.java:133)
+        at JavaRecommendation.controller.PearsonExecutor.lambda$0(PearsonExecutor.java:60)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base/java.lang.Thread.run(Thread.java:834)
+(3382, 6.72987), Song of Freedom (1936)
+(1149, 5.5935736), JLG/JLG - autoportrait de d�cembre (1994)
+(729, 5.5052214), Institute Benjamenta, or This Dream People Call Human Life (1995)
+(2557, 5.4869914), I Stand Alone (Seul contre tous) (1998)
+(3245, 5.467924), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
+(1664, 5.4113646), N�nette et Boni (1996)
+(1787, 5.207143), Paralyzing Fear: The Story of Polio in America, A (1998)
+(989, 5.05188), Schlafes Bruder (Brother of Sleep) (1995)
+(2304, 5.0368204), Love Is the Devil (1998)
+(1117, 4.9685297), Eighth Day, The (Le Huiti�me jour ) (1996)
+Tempo 4: 5.101
+
+Top 10 filmes recomendados para o usuário: 64
+(2705, 6.276227), Late August, Early September (Fin ao�t, d�but septembre) (1998)
+(729, 6.14727), Institute Benjamenta, or This Dream People Call Human Life (1995)
+(1787, 5.698148), Paralyzing Fear: The Story of Polio in America, A (1998)
+(1664, 5.6525555), N�nette et Boni (1996)
+(1851, 5.638247), Leather Jacket Love Story (1997)
+(1553, 5.600954), Late Bloomers (1996)
+(2332, 5.565348), Belly (1998)
+(989, 5.542885), Schlafes Bruder (Brother of Sleep) (1995)
+(2999, 5.459872), Man of the Century (1999)
+(3410, 5.4153476), Soft Fruit (1999)
+Tempo 5: 3.606
+Tempo médio: 3.9366 ms

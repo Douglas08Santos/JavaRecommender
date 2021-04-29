@@ -1,0 +1,67 @@
+Sequencial Initialized
+
+Top 10 filmes recomendados para o usuário: 13
+(3382, 6.461616), Song of Freedom (1936)
+(2557, 5.516968), I Stand Alone (Seul contre tous) (1998)
+(2705, 5.516968), Late August, Early September (Fin ao�t, d�but septembre) (1998)
+(729, 5.3180513), Institute Benjamenta, or This Dream People Call Human Life (1995)
+(404, 4.9673204), Brother Minister: The Assassination of Malcolm X (1994)
+(3517, 4.8370304), Bells, The (1926)
+(1567, 4.779601), Last Time I Committed Suicide, The (1997)
+(2342, 4.7191396), Hard Core Logo (1996)
+(1149, 4.67412), JLG/JLG - autoportrait de d�cembre (1994)
+(1830, 4.6616163), Follow the Bitch (1998)
+Tempo 1: 7.964
+
+Top 10 filmes recomendados para o usuário: 54
+(3382, 7.097728), Song of Freedom (1936)
+(578, 5.806955), Hour of the Pig, The (1993)
+(3245, 5.6457777), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
+(3800, 5.4636283), Criminal Lovers (Les Amants Criminels) (1999)
+(989, 5.419737), Schlafes Bruder (Brother of Sleep) (1995)
+(853, 5.328411), Dingo (1992)
+(1830, 5.2977276), Follow the Bitch (1998)
+(3236, 5.277688), Zachariah (1971)
+(3410, 5.2524934), Soft Fruit (1999)
+(557, 5.166428), Mamma Roma (1962)
+Tempo 2: 8.43
+
+Top 10 filmes recomendados para o usuário: 52
+(1787, 5.106962), Paralyzing Fear: The Story of Polio in America, A (1998)
+(2931, 5.0970674), Time of the Gypsies (Dom za vesanje) (1989)
+(2444, 5.066174), 24 7: Twenty Four Seven (1997)
+(2198, 5.0597243), Modulations (1998)
+(3800, 4.99559), Criminal Lovers (Les Amants Criminels) (1999)
+(989, 4.951699), Schlafes Bruder (Brother of Sleep) (1995)
+(3245, 4.8819213), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
+(1830, 4.829689), Follow the Bitch (1998)
+(2503, 4.8189206), Apple, The (Sib) (1998)
+(3236, 4.80965), Zachariah (1971)
+Tempo 3: 8.079
+
+Top 10 filmes recomendados para o usuário: 38
+(1149, 5.7080784), JLG/JLG - autoportrait de d�cembre (1994)
+(557, 5.6618505), Mamma Roma (1962)
+(729, 5.1516294), Institute Benjamenta, or This Dream People Call Human Life (1995)
+(2198, 5.0827622), Modulations (1998)
+(1851, 5.070099), Leather Jacket Love Story (1997)
+(2332, 4.9092946), Belly (1998)
+(53, 4.898274), Lamerica (1994)
+(3245, 4.892443), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
+(666, 4.8892326), All Things Fair (1996)
+(439, 4.825223), Dangerous Game (1993)
+Tempo 4: 8.536
+
+Top 10 filmes recomendados para o usuário: 41
+(729, 5.608079), Institute Benjamenta, or This Dream People Call Human Life (1995)
+(2825, 5.608079), Rosie (1998)
+(3245, 5.290781), I Am Cuba (Soy Cuba/Ya Kuba) (1964)
+(2309, 5.08582), Inheritors, The (Die Siebtelbauern) (1998)
+(578, 5.036227), Hour of the Pig, The (1993)
+(2760, 4.948083), Gambler, The (A J�t�kos) (1997)
+(811, 4.9012313), Bewegte Mann, Der (1994)
+(3410, 4.890587), Soft Fruit (1999)
+(3542, 4.88937), Coming Apart (1969)
+(2999, 4.880856), Man of the Century (1999)
+Tempo 5: 7.619
+Tempo médio: 8.1256 ms

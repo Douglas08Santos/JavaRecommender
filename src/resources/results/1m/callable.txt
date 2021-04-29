@@ -1,0 +1,82 @@
+Callable Initialized
+
+Top 10 filmes recomendados para o usuário: 19
+^[[A(3382, 6.645276), Song of Freedom (1936)
+(572, 5.5643644), Foreign Student (1994)
+(578, 5.354504), Hour of the Pig, The (1993)
+(2198, 5.0753117), Modulations (1998)
+(3542, 4.9819193), Coming Apart (1969)
+(3603, 4.975775), Gay Deceivers, The (1969)
+(2309, 4.8923206), Inheritors, The (Die Siebtelbauern) (1998)
+(2304, 4.8792024), Love Is the Devil (1998)
+(2197, 4.8664927), Firelight (1997)
+(2444, 4.8491764), 24 7: Twenty Four Seven (1997)
+Tempo 1: 4.285
+
+Top 10 filmes recomendados para o usuário: 87
+(557, 4.8954096), Mamma Roma (1962)
+(1851, 4.3036585), Leather Jacket Love Story (1997)
+(167, 4.2969494), Feast of July (1995)
+(1174, 4.286625), Grosse Fatigue (1994)
+(1830, 4.0862865), Follow the Bitch (1998)
+(3517, 4.0423813), Bells, The (1926)
+(2358, 3.9965029), Savior (1998)
+(854, 3.92864), Ballad of Narayama, The (Narayama Bushiko) (1958)
+(1795, 3.924265), Callej�n de los milagros, El (1995)
+(3578, 3.9117613), Gladiator (2000)
+Tempo 2: 4.867
+
+Top 10 filmes recomendados para o usuário: 31
+(1664, 5.5706625), N�nette et Boni (1996)
+(864, 5.290479), Wife, The (1995)
+(1174, 5.240028), Grosse Fatigue (1994)
+(2198, 5.233855), Modulations (1998)
+(106, 5.073576), Nobody Loves Me (Keiner liebt mich) (1994)
+(2825, 5.010375), Rosie (1998)
+(1117, 4.9576926), Eighth Day, The (Le Huiti�me jour ) (1996)
+(1780, 4.897024), Ayn Rand: A Sense of Life (1997)
+(2999, 4.893737), Man of the Century (1999)
+(758, 4.859171), Jar, The (Khomreh) (1992)
+Tempo 3: 5.312
+
+Top 10 filmes recomendados para o usuário: 27
+java.util.concurrent.ExecutionException: java.lang.NullPointerException
+        at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+        at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+        at JavaRecommendation.controller.PearsonCallable.generateRecommendations(PearsonCallable.java:77)
+        at JavaRecommendation.controller.PearsonCallable.getRecommendations(PearsonCallable.java:45)
+        at JavaRecommendation.App.main(App.java:36)
+Caused by: java.lang.NullPointerException
+        at JavaRecommendation.controller.PearsonCallable.getPearson(PearsonCallable.java:137)
+        at JavaRecommendation.controller.PearsonCallable.calculateNeighbours(PearsonCallable.java:178)
+        at JavaRecommendation.controller.PearsonCallable.predictRating(PearsonCallable.java:147)
+        at JavaRecommendation.controller.PearsonCallable.lambda$0(PearsonCallable.java:63)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base/java.lang.Thread.run(Thread.java:834)
+(572, 6.1632442), Foreign Student (1994)
+(2765, 6.032177), Acid House, The (1998)
+(2760, 5.8104677), Gambler, The (A J�t�kos) (1997)
+(1851, 5.6615276), Leather Jacket Love Story (1997)
+(3542, 5.580799), Coming Apart (1969)
+(3603, 5.5746546), Gay Deceivers, The (1969)
+(989, 5.5661654), Schlafes Bruder (Brother of Sleep) (1995)
+(2503, 5.5367947), Apple, The (Sib) (1998)
+(130, 5.5061927), Angela (1995)
+(2673, 5.4466777), Eternity and a Day (Mia eoniotita ke mia mera ) (1998)
+Tempo 4: 3.673
+
+Top 10 filmes recomendados para o usuário: 96
+(3382, 6.6776657), Song of Freedom (1936)
+(2063, 5.733017), Seventh Heaven (Le Septi�me ciel) (1997)
+(2825, 5.733017), Rosie (1998)
+(557, 5.5617766), Mamma Roma (1962)
+(1787, 5.154938), Paralyzing Fear: The Story of Polio in America, A (1998)
+(167, 5.106878), Feast of July (1995)
+(2197, 5.040451), Firelight (1997)
+(989, 4.999675), Schlafes Bruder (Brother of Sleep) (1995)
+(1149, 4.913473), JLG/JLG - autoportrait de d�cembre (1994)
+(789, 4.8902917), I, Worst of All (Yo, la peor de todas) (1990)
+Tempo 5: 3.641
+Tempo médio: 4.355600000000001 ms
