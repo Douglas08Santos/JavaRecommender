@@ -3,3 +3,4 @@ src/main/java/JavaRecommendation/test/*
 target/classes/JavaRecommendation/controller/PearsonCallable.class
 target/classes/JavaRecommendation/controller/PearsonExecutor.class
 target/classes/JavaRecommendation/controller/PearsonFork.class
+/target/
