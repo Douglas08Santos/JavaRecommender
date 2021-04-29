@@ -7,25 +7,22 @@ import JavaRecommendation.data.MovieRepo;
 import JavaRecommendation.data.UserRepo;
 import JavaRecommendation.interfaces.SimilarityMetric;
 import JavaRecommendation.interfaces.User;
-import JavaRecommendation.model.Movie;
 import JavaRecommendation.model.Rating;
 
-public class PearsonParallelStrem implements SimilarityMetric{
+public class PearsonParallelStream implements SimilarityMetric{
 
     private double[][] simMatrix = null;
     private ArrayList<User> usersList;
     ArrayList<Rating> recommendations;
     private User lastUser = null;
 
-    public PearsonParallelStrem(){
-        System.out.println("Loading Pearson");
+    public PearsonParallelStream(){
+        System.out.println("Initialize Parallel");
         ArrayList<User> users = UserRepo.getUsers();
-        System.out.println(users.size());
         simMatrix = new double[users.size()][users.size()];
         usersList = users;
-        System.out.println("Calculing All Similarities");
         calculateAllSimilarity();
-        System.out.println("Pearson Initialized");
+        System.out.println("Parallel Initialized");
 
     }
 

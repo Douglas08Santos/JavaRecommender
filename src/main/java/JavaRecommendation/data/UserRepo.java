@@ -10,11 +10,11 @@ import JavaRecommendation.model.MyUser;
 
 public class UserRepo {
     private static HashMap<Integer, User> usersMap;
-
+    private static String csvPath;
     @SuppressWarnings("unused")
-    private static void loadUsers() {
+    private static void loadUsers(String csvPath) {
         System.out.println("Loading ratings...");
-        String csvPath = "src/resources/ml-100k/ratings.csv";
+        //String csvPath = "src/resources/ml-100k/ratings.csv";
         try {
             System.out.println("Open: " + csvPath);
             FileReader fileReader = new FileReader(csvPath);
@@ -41,10 +41,20 @@ public class UserRepo {
         }  
     }
 
+    public static void init(String ratingsFile){
+        if(usersMap == null){
+            usersMap = new HashMap<Integer, User>();
+            loadUsers(ratingsFile);
+        }
+    }
+
     public static void init(){
         if(usersMap == null){
             usersMap = new HashMap<Integer, User>();
-            loadUsers();
+            if (csvPath == null) {
+                csvPath = "src/resources/ml-100k/ratings.csv";
+            }
+            loadUsers(csvPath);
         }
     }
 

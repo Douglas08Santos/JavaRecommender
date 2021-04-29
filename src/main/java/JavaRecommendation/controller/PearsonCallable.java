@@ -23,14 +23,13 @@ public class PearsonCallable implements SimilarityMetric{
 
 
     public PearsonCallable(){
-        System.out.println("Loading Pearson");
+        System.out.println("Initialize Callable");
 
         ArrayList<User> users = UserRepo.getUsers();
         simMatrix = new double[users.size()][users.size()];
         usersList = users;
-        System.out.println("Calculing All Similarities");
         calculateAllSimilarity();        
-        System.out.println("Pearson Initialized");
+        System.out.println("Callable Initialized");
 
     }
 

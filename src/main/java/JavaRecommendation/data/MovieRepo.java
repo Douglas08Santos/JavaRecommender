@@ -9,14 +9,15 @@ import JavaRecommendation.model.Movie;
 
 public class MovieRepo {
     private static HashMap<Integer, Movie> moviesMap;
+    private static String csvPath;
     
     /* 
     *   Read csv movie data
     */
     @SuppressWarnings("unused")
-    private static void loadMovies(){
+    private static void loadMovies(String csvPath){
         System.out.println("Loading Movies...");
-        String csvPath = "src/resources/ml-100k/movies.csv";
+        //String csvPath = "src/resources/ml-100k/movies.csv";
         try {
             System.out.println("Opening: " + csvPath);
             FileReader fileReader = new FileReader(csvPath);
@@ -45,11 +46,27 @@ public class MovieRepo {
     /*
      *  Initialize movieMap 
      */
-    public static void init(){
+    public static void init(String csvPath){
         if(moviesMap == null){
             moviesMap = new HashMap<Integer, Movie>();
             try {
-                loadMovies();
+                loadMovies(csvPath);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }            
+        }
+    }
+    /*
+     *  Initialize movieMap 
+     */
+    public static void init(){
+        if(moviesMap == null){
+            moviesMap = new HashMap<Integer, Movie>();
+            if(csvPath == null){
+                csvPath = "src/resources/ml-100k/movies.csv";
+            }
+            try {
+                loadMovies(csvPath);
             } catch (Exception e) {
                 e.printStackTrace();
             }            

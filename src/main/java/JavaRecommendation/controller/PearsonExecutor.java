@@ -13,7 +13,6 @@ import JavaRecommendation.model.Movie;
 import JavaRecommendation.model.Rating;
 
 public class PearsonExecutor implements SimilarityMetric{
-
     private double[][] simMatrix = null;
     private ArrayList<User> usersList;
     ArrayList<Rating> recommendations;
@@ -21,14 +20,13 @@ public class PearsonExecutor implements SimilarityMetric{
 
 
     public PearsonExecutor(){
-        System.out.println("Loading Pearson");
+        System.out.println("Initialize Executor");
 
         ArrayList<User> users = UserRepo.getUsers();
         simMatrix = new double[users.size()][users.size()];
         usersList = users;
-        System.out.println("Calculing All Similarities");
         calculateAllSimilarity();        
-        System.out.println("Pearson Initialized");
+        System.out.println("Executor Initialized");
 
     }
 
@@ -195,8 +193,4 @@ public class PearsonExecutor implements SimilarityMetric{
         }
         return result;
     }
-
-   
-    
-    
 }
