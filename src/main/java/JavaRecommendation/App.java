@@ -17,8 +17,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        String movieFile = "src/resources/ml-1m/movies.dat";
-        String ratingFile = "src/resources/ml-1m/ratings.dat";
+        String movieFile = "src/resources/ml-20m/movies.csv";
+        String ratingFile = "src/resources/ml-20m/ratings.csv";
         UserRepo.init(ratingFile);
         MovieRepo.init(movieFile);
         int users[] = {19, 87, 30, 27, 96};
@@ -28,7 +28,7 @@ public class App
         PearsonParallelStream pearson = new PearsonParallelStream();
         User myUser;
         long total = 0;
-        for (int i = 0; i < users.length; i++) {
+        for (int i = 0; i < 1; i++) {
             /**Gerando id aleátorios de 1 a 100 */
             myUser = UserRepo.getUser(users[i]);
             System.out.println("\nTop 10 filmes recomendados para o usuário: " + myUser.getUserId());

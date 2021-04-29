@@ -1,0 +1,16 @@
+Open: src/resources/ml-20m/ratings.csv
+Opening: src/resources/ml-20m/movies.csv
+Sequencial Initialized
+
+Top 10 filmes recomendados para o usuário: 19
+(121029, 6.506341), No Distance Left to Run (2010)
+(68265, 6.1728153), "Days Between, The (In den Tag hinein) (2001)"
+(53651, 6.1260357), Once You're Born You Can No Longer Hide (Quando sei nato non puoi più nasconderti) (2005)
+(87948, 6.0744514), Bright Victory (1951)
+(88488, 6.0744514), "Summer Wishes, Winter Dreams (1973)"
+(80478, 6.0604177), "Man Vanishes, A (Ningen Johatsu) (1967)"
+(80480, 6.0604177), History of Postwar Japan as Told by a Bar Hostess (Nippon Sengoshi - Madamu onboro no Seikatsu) (1970)
+(98996, 6.0604177), Filming 'Othello' (1978)
+(128830, 6.042775), Plastic Bag (2009)
+(91617, 6.0383844), "New Life, A (La vie nouvelle) (2002)"
+Tempo 1: 631.248

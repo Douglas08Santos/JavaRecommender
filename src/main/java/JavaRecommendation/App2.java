@@ -1,8 +1,6 @@
 package JavaRecommendation;
 
 import java.util.ArrayList;
-import java.util.Random;
-
 import JavaRecommendation.controller.Pearson;
 import JavaRecommendation.controller.PearsonCallable;
 import JavaRecommendation.controller.PearsonExecutor;
@@ -17,11 +15,12 @@ public class App2
 {
     public static void main( String[] args )
     {
-        String movieFile = "src/resources/ml-1m/movies.dat";
-        String ratingFile = "src/resources/ml-1m/ratings.dat";
+        String movieFile = "src/resources/ml-100k/movies.csv";
+        String ratingFile = "src/resources/ml-100k/ratings.csv";
         UserRepo.init(ratingFile);
         MovieRepo.init(movieFile);
         int nTest = 5;
+        int users[] = {19, 87, 30, 27, 96};
         Pearson pearson = new Pearson();
         PearsonExecutor pearsonExecutor = new PearsonExecutor();
         PearsonCallable pearsonCallable = new PearsonCallable();
@@ -33,7 +32,7 @@ public class App2
         long total = 0;
         for (int i = 0; i < nTest; i++) {
             /**Gerando id aleátorios de 1 a 100 */
-            myUser = UserRepo.getUser(new Random().nextInt(100) + 1);
+            myUser = UserRepo.getUser(users[i]);
             long start = System.currentTimeMillis();
             ArrayList<Rating> result = pearson.getRecommendations(myUser);
             long end = System.currentTimeMillis();
@@ -45,7 +44,7 @@ public class App2
             }
             System.out.println("Tempo " + (i+1) +": "+ (end - start)/1000.0); 
         }
-        System.out.println("Tempo médio: " + (total/5.0)/1000 + " ms");
+        System.out.println("Tempo médio: " + (total/5.0)/1000 + " segs");
         fastest = "Sequencial";
         fastestTime = total;
         System.out.println();
@@ -53,7 +52,7 @@ public class App2
         total = 0;
         for (int i = 0; i < nTest; i++) {
             /**Gerando id aleátorios de 1 a 100 */
-            myUser = UserRepo.getUser(new Random().nextInt(100) + 1);
+            myUser = UserRepo.getUser(users[i]);
             long start = System.currentTimeMillis();
             ArrayList<Rating> result = pearsonExecutor.getRecommendations(myUser);
             long end = System.currentTimeMillis();
@@ -65,7 +64,7 @@ public class App2
             }
             System.out.println("Tempo " + (i+1) +": "+ (end - start)/1000.0); 
         }
-        System.out.println("Tempo médio: " + (total/5.0)/1000 + " ms");
+        System.out.println("Tempo médio: " + (total/5.0)/1000 + " segs");
         if(fastestTime > total){
             fastest = "Executor";
             fastestTime = total;
@@ -75,7 +74,7 @@ public class App2
         total = 0;
         for (int i = 0; i < nTest; i++) {
             /**Gerando id aleátorios de 1 a 100 */
-            myUser = UserRepo.getUser(new Random().nextInt(100) + 1);
+            myUser = UserRepo.getUser(users[i]);
             long start = System.currentTimeMillis();
             ArrayList<Rating> result = pearsonCallable.getRecommendations(myUser);
             long end = System.currentTimeMillis();
@@ -87,7 +86,7 @@ public class App2
             }
             System.out.println("Tempo " + (i+1) +": "+ (end - start)/1000.0); 
         }
-        System.out.println("Tempo médio: " + (total/5.0)/1000 + " ms");
+        System.out.println("Tempo médio: " + (total/5.0)/1000 + " segs");
         if(fastestTime > total){
             fastest = "Callable";
             fastestTime = total;
@@ -97,7 +96,7 @@ public class App2
         total = 0;
         for (int i = 0; i < nTest; i++) {
             /**Gerando id aleátorios de 1 a 100 */
-            myUser = UserRepo.getUser(new Random().nextInt(100) + 1);
+            myUser = UserRepo.getUser(users[i]);
             long start = System.currentTimeMillis();
             ArrayList<Rating> result = pearsonStream.getRecommendations(myUser);
             long end = System.currentTimeMillis();
@@ -109,12 +108,12 @@ public class App2
             }
             System.out.println("Tempo " + (i+1) +": "+ (end - start)/1000.0); 
         }
-        System.out.println("Tempo médio: " + (total/5.0)/1000 + " ms");
+        System.out.println("Tempo médio: " + (total/5.0)/1000 + " segs");
         if(fastestTime > total){
             fastest = "ParallelStream";
             fastestTime = total;
         }
-        System.out.println("Fastest: " + fastest + " = " + fastestTime/5.0/1000 + " ms" );
+        System.out.println("Fastest: " + fastest + " = " + fastestTime/5.0/1000 + " segs" );
         System.out.println();     
     }
         
