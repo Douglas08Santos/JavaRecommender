@@ -1,7 +1,6 @@
 package JavaRecommendation.controller;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 import JavaRecommendation.data.MovieRepo;
@@ -18,11 +17,9 @@ public class Pearson implements SimilarityMetric{
     private User lastUser = null;
 
     public Pearson(){
-        System.out.println("Initialize Sequencial");
         ArrayList<User> users = UserRepo.getUsers();
         simMatrix = new double[users.size()][users.size()];
         usersList = users;
-        System.out.println("Calculing All Similarities");
         calculateAllSimilarity();
         System.out.println("Sequencial Initialized");
 

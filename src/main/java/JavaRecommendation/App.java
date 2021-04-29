@@ -21,15 +21,17 @@ public class App
         String ratingFile = "src/resources/ml-100k/ratings.csv";
         UserRepo.init(ratingFile);
         MovieRepo.init(movieFile);
-
+        int nTest = 5;
         Pearson pearson = new Pearson();
         PearsonExecutor pearsonExecutor = new PearsonExecutor();
         PearsonCallable pearsonCallable = new PearsonCallable();
         PearsonParallelStream pearsonStream = new PearsonParallelStream();
-        User myUser; 
+        User myUser;
+        String fastest = "";
+        long fastestTime = 0;
         System.out.println("Teste Recommender Sequencial");
         long total = 0;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < nTest; i++) {
             /**Gerando id aleátorios de 1 a 100 */
             myUser = UserRepo.getUser(new Random().nextInt(100) + 1);
             long start = System.currentTimeMillis();
@@ -44,10 +46,12 @@ public class App
             System.out.println("Tempo " + (i+1) +": "+ (end - start)/1000.0); 
         }
         System.out.println("Tempo médio: " + (total/5.0)/1000 + " ms");
+        fastest = "Sequencial";
+        fastestTime = total;
         System.out.println();
         System.out.println("Teste Recommender Executor");
         total = 0;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < nTest; i++) {
             /**Gerando id aleátorios de 1 a 100 */
             myUser = UserRepo.getUser(new Random().nextInt(100) + 1);
             long start = System.currentTimeMillis();
@@ -62,10 +66,14 @@ public class App
             System.out.println("Tempo " + (i+1) +": "+ (end - start)/1000.0); 
         }
         System.out.println("Tempo médio: " + (total/5.0)/1000 + " ms");
+        if(fastestTime > total){
+            fastest = "Executor";
+            fastestTime = total;
+        }
         System.out.println();
         System.out.println("Teste Recommender Callable");
         total = 0;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < nTest; i++) {
             /**Gerando id aleátorios de 1 a 100 */
             myUser = UserRepo.getUser(new Random().nextInt(100) + 1);
             long start = System.currentTimeMillis();
@@ -80,10 +88,14 @@ public class App
             System.out.println("Tempo " + (i+1) +": "+ (end - start)/1000.0); 
         }
         System.out.println("Tempo médio: " + (total/5.0)/1000 + " ms");
+        if(fastestTime > total){
+            fastest = "Callable";
+            fastestTime = total;
+        }
         System.out.println();
         System.out.println("Teste Recommender ParallelStream");
         total = 0;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < nTest; i++) {
             /**Gerando id aleátorios de 1 a 100 */
             myUser = UserRepo.getUser(new Random().nextInt(100) + 1);
             long start = System.currentTimeMillis();
@@ -98,7 +110,12 @@ public class App
             System.out.println("Tempo " + (i+1) +": "+ (end - start)/1000.0); 
         }
         System.out.println("Tempo médio: " + (total/5.0)/1000 + " ms");
-        System.out.println();       
+        if(fastestTime > total){
+            fastest = "ParallelStream";
+            fastestTime = total;
+        }
+        System.out.println("Fastest: " + fastest + " = " + fastestTime/5.0/1000 );
+        System.out.println();     
     }
         
 }

@@ -20,12 +20,10 @@ public class PearsonExecutor implements SimilarityMetric{
 
 
     public PearsonExecutor(){
-        System.out.println("Initialize Executor");
-
         ArrayList<User> users = UserRepo.getUsers();
         simMatrix = new double[users.size()][users.size()];
         usersList = users;
-        calculateAllSimilarity();        
+        calculateAllSimilarity();      
         System.out.println("Executor Initialized");
 
     }

@@ -17,7 +17,6 @@ public class PearsonParallelStream implements SimilarityMetric{
     private User lastUser = null;
 
     public PearsonParallelStream(){
-        System.out.println("Initialize Parallel");
         ArrayList<User> users = UserRepo.getUsers();
         simMatrix = new double[users.size()][users.size()];
         usersList = users;
